@@ -1,0 +1,11 @@
+const create = 'Create'
+const trend = 'Trending'
+const search = 'Search'
+const uname = 'Enter Username'
+const date = 'Enter Date'
+const blogHeading = 'Enter Blog Heading'
+const blogContent = 'Enter Blog content'
+const reference1 ='Reference 1:'
+const reference2 ='Reference 2:'
+const isTrend='Is this blog in trend?';
+export const content = { create, trend, search, uname, date, blogContent, blogHeading ,reference2,reference1,isTrend}

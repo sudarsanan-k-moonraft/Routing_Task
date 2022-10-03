@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { WholeContainer } from './AppStyle';
+import Navbar from './components/common/navbar/navbar';
+import { Route, Routes } from 'react-router-dom';
+import MainPage from './components/dashboard/mainPage/mainPage';
+import SearchBar from './components/common/search/searchPage';
+import Trend from './components/dashboard/trendingPage/trendingPage';
+import CreatePage from './components/dashboard/createPage/createPage';
+import ReadPage from './components/common/readPage/readpage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <WholeContainer>
+      <Navbar />
+      <Routes>
+        <Route path="/mainPage" element={<MainPage />} />
+        <Route path="/search" element={<SearchBar />} />
+        <Route path="/trendingPage" element={<Trend />} />
+        <Route path="/createPage" element={<CreatePage />} />
+        <Route path="/readpage"element={<ReadPage />}/>
+      </Routes>
+    </WholeContainer>
   );
 }
 
